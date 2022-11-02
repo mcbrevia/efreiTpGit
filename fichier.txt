@@ -1,5 +1,11 @@
 MCB: test ajout fichier
+<<<<<<< HEAD
 
 MCB : modif fichier(avant push Sophie)
 
 MCB : modif 2 (après push Sophie)
+=======
+SSO: Modification
+>>>>>>> 39f95fb675a32be7a8d01ae81abf984ae1e7be6a
+
+MCB: modif fichier pour restore apres erreur push MCB suite au push Sophie
