@@ -1,0 +1,1 @@
+on a appelé la fonction moyenne 2022-11-03 10:34:30.851886 avec les parametres [1, 1, 1]
