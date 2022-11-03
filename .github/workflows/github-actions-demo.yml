@@ -23,5 +23,4 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
-          name: unit test logs
-          path: logs.txt
+          name: my-artyfact
