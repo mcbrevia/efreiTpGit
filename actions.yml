@@ -1,0 +1,24 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  UnitTests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls -la
+      - uses: actions/checkout@v3 #permet de récupérer les fichiers dans git
+      - run: ls -la
+      - run: pip3 install pytest
+      - run: pytest test_lib.py
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: unit test logs
+          path: logs.txt
+  BuildDockerImage:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v3
+      - run: docker build -t test_mcb
+      - run: docker tag test_mcb mcbrevia/test-registry:latest
+      - run: docker login -u mcbrevia -p secrets.PASSWORD_REGISTRY
+      - run: docker push mcbrevia/test-registry:latest
